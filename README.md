@@ -1,4 +1,0 @@
-ios-quickies
-============
-
-ios-quickies
