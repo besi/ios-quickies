@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/besi/ios-quickies.png?label=ready&title=Ready)](https://waffle.io/besi/ios-quickies)
 ios-quickies
 ============
 
