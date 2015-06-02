@@ -17,3 +17,8 @@ How to show and hide a `UITableView` header with animating those changes.
 ### QRCodeReader
 
 ![screenshot](https://raw.github.com/besi/ios-quickies/master/QRCodeReader/screenshot.png)
+
+
+### ToggleSwipeCell
+
+![screenshot](https://raw.githubusercontent.com/besi/ios-quickies/master/ToggleCellSwipe/screenshot.png)

@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import SWTableViewCell
 
-class MasterViewController: UITableViewController {
+class MasterViewController: UITableViewController, SWTableViewCellDelegate {
 
     var objects = [AnyObject]()
 
@@ -59,10 +60,12 @@ class MasterViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! SWTableViewCell
 
         let object = objects[indexPath.row] as! NSDate
         cell.textLabel!.text = object.description
+        cell.leftUtilityButtons = leftButtons
+        cell.delegate = self
         return cell
     }
 
@@ -79,5 +82,31 @@ class MasterViewController: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
         }
     }
+    
+    // MARK: - Toggle Swipe Gesture
+    
+    var leftButtons : [AnyObject]{
+        var buttons = NSMutableArray()
+        buttons.sw_addUtilityButtonWithColor(UIColor.greenColor(), icon: UIImage(named: "eye"))
+        buttons.sw_addUtilityButtonWithColor(UIColor.redColor(), icon: UIImage(named: "eye-blocked"))
+        
+        let x = NSArray(array: buttons)
+        for button in x as! [UIButton]{
+            button.imageView?.contentMode = .ScaleAspectFit
+        }
+        
+        return buttons as [AnyObject]
+    }
+    
+    func swipeableTableViewCell(cell: SWTableViewCell!, didTriggerLeftUtilityButtonWithIndex index: Int) {
+        
+        cell.hideUtilityButtonsAnimated(true)
+        
+        let makeVisible = (index == 0)
+        
+        cell.textLabel!.text = makeVisible ? "Visible" : "Invisible"
+    }
+    
+    
 }
 
