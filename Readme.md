@@ -1,11 +1,19 @@
-ios-quickies
+[ios-quickies][]
 ============
 
 This project contains various detached Xcode projects which illustrate certain problems.
 
+[ios-quickies]: https://github.com/besi/ios-quickies
 
 
-### ResizeTableHeaderViewAnimated
+### [ToggleSwipeCell][]
+
+![screenshot](https://raw.githubusercontent.com/besi/ios-quickies/master/ToggleCellSwipe/screenshot.png)
+
+[ToggleSwipeCell]: ToggleCellSwipe
+
+
+### [ResizeTableHeaderViewAnimated][]
 
 How to show and hide a `UITableView` header with animating those changes.
 
@@ -13,12 +21,11 @@ How to show and hide a `UITableView` header with animating those changes.
 
 ![screenshot](https://raw.github.com/besi/ios-quickies/master/ResizeTableHeaderViewAnimated/screenshot.png)
 
+[ResizeTableHeaderViewAnimated]: ResizeTableHeaderViewAnimated
 
-### QRCodeReader
+
+### [QRCodeReader][]
 
 ![screenshot](https://raw.github.com/besi/ios-quickies/master/QRCodeReader/screenshot.png)
 
-
-### ToggleSwipeCell
-
-![screenshot](https://raw.githubusercontent.com/besi/ios-quickies/master/ToggleCellSwipe/screenshot.png)
+[QRCodeReader]: QRCodeReader
